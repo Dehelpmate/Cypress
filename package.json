@@ -1,0 +1,21 @@
+{
+  "name": "cypres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
+    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.2.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.2.1",
+    "mochawesome": "^7.1.2",
+    "mochawesome-merge": "^4.2.1"
+  }
+}
