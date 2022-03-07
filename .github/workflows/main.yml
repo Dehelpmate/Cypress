@@ -19,7 +19,7 @@ jobs:
           $(npm bin)/cypress verify
           
       - name: cypress run
-        run: npm run test:chrome
+        run: npm run test:ci
         continue-on-error: true
         
       - name: Merge report
