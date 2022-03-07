@@ -1,0 +1,33 @@
+name: Cypress Tests
+
+#Manually trigger a workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Install cypress and verify
+        run: npm install
+          
+      - name: cypress run
+        run: npm run test:ci
+        
+      - name: Merge report
+        run: npm run report:merge
+               
+      - name: Gnerate HTML report
+        run: npm run report:generate
+        
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: /home/runner/work/Repo1/Repo1/cypress/report.txt
+          retention-days: 5
+      
+        
