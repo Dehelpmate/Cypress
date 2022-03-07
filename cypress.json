@@ -1,14 +1,10 @@
 {
     "defaultCommandTimeout": 8000,
-    "reporter": "cypress-multi-reporters",
+    "reporter": "mochawesome",
     "reporterOptions": {
-        "configFile": "reporter-config.json"
-    },
-    "reporterEnabled": "mochawesome",
-    "mochawesomeReporterOptions": {
-        "reportDir": "cypress/results/json",
         "overwrite": false,
         "html": false,
         "json": true
+    
     }
 }
