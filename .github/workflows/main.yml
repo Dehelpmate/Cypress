@@ -11,16 +11,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: Install a project with a clean slate
-        run: |
-          npm ci
-          $(npm bin)/cypress cache path
-          $(npm bin)/cypress cache list
-          $(npm bin)/cypress verify
-          
-      - name: cypress run
-        run: npm run test:chrome
-        continue-on-error: true
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
         
       - name: Merge report
         run: npm run report:merge
