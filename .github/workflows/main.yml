@@ -11,13 +11,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: Install a project with a clean slate
-        run: |
-          npm ci
-          $(npm bin)/cypress cache path
-          $(npm bin)/cypress cache list
-          $(npm bin)/cypress verify
-          $(npm bin)/cypress run
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
         
       - name: Merge report
         run: npm run report:merge
