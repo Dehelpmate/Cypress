@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
     "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html",
-    "test:ci":"cypress run"
+    "test:chrome": "cypress run --browser chrome"
   },
   "author": "",
   "license": "ISC",
