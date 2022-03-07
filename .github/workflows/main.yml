@@ -17,13 +17,7 @@ jobs:
           $(npm bin)/cypress cache path
           $(npm bin)/cypress cache list
           $(npm bin)/cypress verify
-          
-      - name: latest
-        run: npx browserslist@latest --update-db
-          
-      - name: cypress run
-        run: npm run test:ci
-        continue-on-error: true
+          $(npm bin)/cypress run
         
       - name: Merge report
         run: npm run report:merge
