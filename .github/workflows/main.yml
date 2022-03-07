@@ -13,9 +13,6 @@ jobs:
         
       - name: Cypress run
         uses: cypress-io/github-action@v2
-        
-      - name: Merge report
-        run: npm run report:merge
                
       - name: Gnerate HTML report
         run: npm run report:generate
