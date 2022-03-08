@@ -16,13 +16,11 @@ jobs:
                
       - name: Gnerate HTML report
         run: npm run report:generate
-        
-      - name: Tar files
-        run: tar -cvf my_files.html /home/runner/work/Cypress/Cypress/TestReport/cypress-combined-report.html
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+      
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
         with:
-         name: my-artifact
-         path: my_files.html
+          name: my-artifact
+          path: /home/runner/work/Cypress/Cypress/TestReport.zip
+          retention-days: 5
         
