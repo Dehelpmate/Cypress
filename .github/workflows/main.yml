@@ -17,7 +17,7 @@ jobs:
         uses: cypress-io/github-action@v2
                
        # Merge mochawesome report of each spec file and generate single html report        
-      - name: Gnerate HTML report
+      - name: Gnerate HTML reporte
         run: npm run report:generate
         
       - name: Tar files
