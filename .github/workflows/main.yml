@@ -18,11 +18,11 @@ jobs:
         run: npm run report:generate
         
       - name: Tar files
-        run: tar -cvf my_files.tar /home/runner/work/Cypress/Cypress/TestReport/cypress-combined-report.html
+        run: tar -cvf my_files.html /home/runner/work/Cypress/Cypress/TestReport/cypress-combined-report.html
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
          name: my-artifact
-         path: my_files.tar
+         path: my_files.html
         
