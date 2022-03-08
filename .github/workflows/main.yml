@@ -16,17 +16,10 @@ jobs:
                
       - name: Gnerate HTML report
         run: npm run report:generate
+        
+      - name: Dummy
+        run: |
+          cd /home/runner/work/Cypress/Cypress/TestReport/
+          ll
       
-      - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v3
-        with:
-          name: my-artifact
-          path: /home/runner/work/Cypress/Cypress/TestReport/cypress-combined-report.html
-          retention-days: 5
-          
-      - name: Download my-artifact
-        uses: ./
-        with:
-         name: 'My-artifact'
-         path: /home/runner/work/Cypress/Cypress/
-         retention-days: 1
+     
