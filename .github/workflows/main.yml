@@ -28,4 +28,5 @@ jobs:
         uses: ./
         with:
          name: 'My-artifact'
-         path: https://github.com/Dehelpmate/Cypress/
+         path: /home/runner/work/Cypress/Cypress/
+         retention-days: 1
