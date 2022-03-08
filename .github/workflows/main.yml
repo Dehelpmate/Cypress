@@ -11,9 +11,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
+        # Install NPM dependencies, cache them correctly
+        # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
                
+       # Merge mochawesome report of each spec file and generate single html report        
       - name: Gnerate HTML report
         run: npm run report:generate
         
