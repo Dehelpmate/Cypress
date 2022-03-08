@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: /home/runner/work/Repo1/Repo1/cypress/report.txt
+          path: /home/runner/work/Cypress/Cypress/TestReport/cypress-combined-report.html
           retention-days: 5
       
         
