@@ -17,9 +17,6 @@ jobs:
       - name: Gnerate HTML report
         run: npm run report:generate
       
-      - name: Tar files
-        run: tar -cvf my_files.tar /home/runner/work/Cypress/Cypress/TestReport/cypress-combined-report.html/to/../Dehelpmate/Cypress
-
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v3
         with:
